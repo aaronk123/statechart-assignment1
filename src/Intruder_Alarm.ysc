@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sgraph="http://www.yakindu.org/sct/sgraph/2.0.0">
-  <sgraph:Statechart xmi:id="_cRB7IKGUEeyg76i-y9D5rg" specification="// Use the event driven execution model.&#xA;// Switch to cycle based behavior&#xA;// by specifying '@CycleBased(200)'.&#xA;@EventDriven&#xD;&#xA;&#xD;&#xA;// Use @SuperSteps(yes) to enable&#xA;// super step semantics.&#xA;@SuperSteps(no)&#xD;&#xA;&#xD;&#xA;interface:&#xD;&#xA;&#x9;// Define events and variables here. &#xA;&#x9;// Use CTRL + Space for content assist.&#xA;&#x9;var securityLevel:integer&#xA;&#x9;var fullyArmed:boolean&#xA;&#x9;var triggered:boolean&#xA;&#x9;&#xA;&#x9;in event keypadEnter&#xA;&#x9;in event myEvent&#xA;&#x9;in event setLevel&#xA;&#x9;in event intrusion&#xA;&#x9;in event enterPassword&#xA;&#x9;in event reset&#xA;&#x9;&#xA;&#x9;&#xA;&#x9;operation KeypadLightAndPicture():void&#xA;&#x9;operation deletePicture():void&#xA;&#x9;operation savePictureAndEnterTransmittingMode()&#xA;&#x9;&#xA;&#x9;" name="Intruder_Alarm">
+  <sgraph:Statechart xmi:id="_cRB7IKGUEeyg76i-y9D5rg" specification="// Use the event driven execution model.&#xA;// Switch to cycle based behavior&#xA;// by specifying '@CycleBased(200)'.&#xA;@EventDriven&#xD;&#xA;&#xD;&#xA;// Use @SuperSteps(yes) to enable&#xA;// super step semantics.&#xA;@SuperSteps(no)&#xD;&#xA;&#xD;&#xA;interface:&#xD;&#xA;&#x9;// Define events and variables here. &#xA;&#x9;// Use CTRL + Space for content assist.&#xA;&#x9;var securityLevel:integer&#xA;&#x9;var fullyArmed:boolean&#xA;&#x9;var triggered:boolean&#xA;&#x9;&#xA;&#x9;in event keypadEnter&#xA;&#x9;in event toggleOn&#xA;&#x9;in event setLevel&#xA;&#x9;in event intrusion&#xA;&#x9;in event enterPassword&#xA;&#x9;in event reset&#xA;&#x9;&#xA;&#x9;&#xA;&#x9;operation KeypadLightAndPicture():void&#xA;&#x9;operation deletePicture():void&#xA;&#x9;operation savePictureAndEnterTransmittingMode()&#xA;&#x9;&#xA;&#x9;" name="Intruder_Alarm">
     <regions xmi:id="_cRGMk6GUEeyg76i-y9D5rg" name="main region">
       <vertices xsi:type="sgraph:Entry" xmi:id="_cRGMlKGUEeyg76i-y9D5rg">
         <outgoingTransitions xmi:id="_cRGMlaGUEeyg76i-y9D5rg" target="_cRGzoKGUEeyg76i-y9D5rg"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_cRGzoKGUEeyg76i-y9D5rg" specification="" name="control panel" incomingTransitions="_cRGMlaGUEeyg76i-y9D5rg _km9CeK4EEeyHluU_ptci3A">
-        <outgoingTransitions xmi:id="_kkK0N64EEeyHluU_ptci3A" specification="myEvent" target="_c8uFkKIaEeyJqerynslqCQ"/>
+        <outgoingTransitions xmi:id="_kkK0N64EEeyHluU_ptci3A" specification="toggleOn" target="_c8uFkKIaEeyJqerynslqCQ"/>
         <outgoingTransitions xmi:id="_FrdwIKIbEeyJqerynslqCQ" specification="setLevel" target="_FrXpgKIbEeyJqerynslqCQ"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_c8uFkKIaEeyJqerynslqCQ" name="off" incomingTransitions="_kkK0N64EEeyHluU_ptci3A _LdUEELNgEeyE77ITCsLajg">
-        <outgoingTransitions xmi:id="_km9CeK4EEeyHluU_ptci3A" specification="myEvent&#xD;&#xA;" target="_cRGzoKGUEeyg76i-y9D5rg"/>
+        <outgoingTransitions xmi:id="_km9CeK4EEeyHluU_ptci3A" specification="toggleOn&#xD;&#xA;" target="_cRGzoKGUEeyg76i-y9D5rg"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_FrXpgKIbEeyJqerynslqCQ" specification="entry / securityLevel=0" name="set level" incomingTransitions="_FrdwIKIbEeyJqerynslqCQ _eqKM4KIcEeyJqerynslqCQ">
         <outgoingTransitions xmi:id="_QLRW4KIbEeyJqerynslqCQ" specification="&#xD;&#xA;keypadEnter&#xD;&#xA;" target="_QLNsgKIbEeyJqerynslqCQ"/>
